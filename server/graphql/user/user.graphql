@@ -1,0 +1,26 @@
+type User {
+  tel: String
+  password: String
+  sellerLevel: Int
+  joinDate: String
+  isAuthenticated: Boolean
+}
+
+type Tokens {
+  tel: String
+  tokens: [Token]
+}
+
+type Token {
+  token: String
+}
+
+type Mutation {
+  addUser(tel: String, password: String): User
+  updatePassword(tel: String!, password: String!): User
+  signIn(tel: String!, password: String!): Token
+}
+
+type Query {
+  User(tel: String!): User
+}

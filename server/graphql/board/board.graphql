@@ -1,0 +1,11 @@
+type Board {
+  id: ID
+  title: String
+  readLevel: Int
+  writeLevel: Int
+}
+
+type Query {
+  Board(id: ID!): Board
+  AllBoards: [Board]
+}
